@@ -43,7 +43,7 @@ const topics = [
     url: '/',
     imageUrl: '/react.png',
   }, {
-    name: 'Natural Language Processing',
+    name: 'Language Models',
     role: 'Python',
     icon: faPython,
     url: '/',
@@ -87,7 +87,7 @@ const links = [
     name: 'Linkedin',
     url: 'https://linkedin.com/in/msskzx',
     icon: faLinkedin,
-    desc: 'Same things i said here but more formal and blue.',
+    desc: 'Same things i said here but more blue.',
   }, {
     name: 'GitHub',
     url: 'https://github.com/msskzx',
@@ -105,32 +105,28 @@ const links = [
     desc: 'Nothing to see here but in O(1).',
   },
 ]
-            
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-          <div className="flex items-center gap-x-6">
-            <div className="relative h-16 w-16 rounded-full overflow-hidden">
-              <Image
-                src={meh.imageUrl}
-                alt={meh.imageUrl}
-                fill
-                priority
-              />
-            </div>
-            <div>
-              <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{meh.name}</h3>
-              <p className="text-sm font-semibold leading-6 text-indigo-600">{meh.role}</p>
-            </div>
+      <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="flex items-center gap-x-6">
+          <div className="relative h-16 w-16 rounded-full overflow-hidden">
+            <Image
+              src={meh.imageUrl}
+              alt={meh.imageUrl}
+              fill
+              priority
+            />
+          </div>
+          <div>
+            <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{meh.name}</h3>
+            <p className="text-sm font-semibold leading-6 text-indigo-600">{meh.role}</p>
           </div>
         </div>
       </div>
-
       <div className="lg:rounded-xl py-24 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 sm:grid-cols-1 xl:grid-cols-4">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               Portfolio
@@ -139,13 +135,12 @@ export default function Home() {
               {meh.intro}
             </p>
           </div>
-
-          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3">
+          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 sm:gap-y-16 xl:col-span-3">
             <div className="shadow-lg rounded-lg full-rounded overflow-hidden">
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2 tracking-tight opacity-70">{meh.years}</h2>
-                <p className="tracking-tight opacity-50">of Software Development</p>
-                <div className="size-7 mt-1">
+                <p className="tracking-tight opacity-50 mb-3">of Software Development</p>
+                <div className="size-7">
                   <a
                     href={myLinks.linkedin}
                     target="_blank"
@@ -160,8 +155,8 @@ export default function Home() {
             <div className="shadow-lg rounded-lg overflow-hidden">
               <div className="p-6">
                 <h2 className="text-xl tracking-tight font-semibold mb-2 opacity-70">{meh.projects}</h2>
-                <p className="tracking-tight opacity-50">in Diverse Teams</p>
-                <div className="size-7 mt-1">
+                <p className="tracking-tight opacity-50 mb-3">in Diverse Teams</p>
+                <div className="size-7">
                   <a
                     href={myLinks.github}
                     target="_blank"
@@ -176,9 +171,9 @@ export default function Home() {
             <div className="shadow-lg rounded-lg overflow-hidden">
               <div className="p-6">
                 <h2 className="text-xl tracking-tight font-semibold mb-2 opacity-70">500+ Problems</h2>
-                <p className=" tracking-tight opacity-50">on Coding Platforms</p>
-                <div className="grid sm:grid-cols-3 lg:col-span-3">
-                  <div className="size-7 mt-1">
+                <p className=" tracking-tight opacity-50 mb-3">on Coding Platforms</p>
+                <div className="grid sm:grid-cols-5 lg:col-span-3">
+                  <div className="size-7">
                     <a
                       href={myLinks.problems}
                       target="_blank"
@@ -188,7 +183,7 @@ export default function Home() {
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
                   </div>
-                  <div className="size-7 mt-1">
+                  <div className="size-7">
                     <a
                       href={myLinks.hackerrank}
                       target="_blank"
@@ -198,7 +193,7 @@ export default function Home() {
                       <FontAwesomeIcon icon={faHackerrank} />
                     </a>
                   </div>
-                  <div className="size-7 mt-1">
+                  <div className="size-7">
                     <a
                       href={myLinks.leetcode}
                       target="_blank"
@@ -212,30 +207,32 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
-          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-            {topics.map((topic) => (
-              <li key={topic.name}>
-                <a href={topic.url}
-                  className="block h-full w-full group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <div className="flex items-center gap-x-6">
-                    <div className="relative rounded-full">
-                      <div className="size-12 mt-1">
-                        <FontAwesomeIcon icon={topic.icon} />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{topic.name}</h3>
-                      <p className="text-sm font-semibold leading-6 text-indigo-600">{topic.role}</p>
+        </div>
+      </div>
+
+      <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
+        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-4 xl:col-span-4">
+          {topics.map((topic) => (
+            <li key={topic.name}>
+              <a href={topic.url}
+                className="block h-full w-full group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                target="_blank"
+                rel="noopener noreferrer">
+                <div className="flex items-center gap-x-6">
+                  <div className="relative rounded-full">
+                    <div className="size-12">
+                      <FontAwesomeIcon icon={topic.icon} />
                     </div>
                   </div>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+                  <div>
+                    <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{topic.name}</h3>
+                    <p className="text-sm font-semibold leading-6 text-indigo-600">{topic.role}</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="lg:rounded-xl py-24 sm:py-32">
@@ -258,7 +255,7 @@ export default function Home() {
                   <div className="flex flex-col gap-y-4">
                     <div className="flex items-center gap-x-6">
                       <div className="relative rounded-full overflow-hidden">
-                        <div className="size-12 mt-1">
+                        <div className="size-12">
                           <FontAwesomeIcon icon={project.icon} />
                         </div>
                       </div>
@@ -277,33 +274,33 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl sm:grid-cols-2 lg:grid-cols-4 lg:text-left">
 
         {links.map((link) => (
           <a
-          key={link.name}
-          href={link.url}
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="flex gap-x-4">
-            <div className="size-5 mt-1">
-              <FontAwesomeIcon icon={link.icon} />
+            key={link.name}
+            href={link.url}
+            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="flex gap-x-4">
+              <div className="size-5">
+                <FontAwesomeIcon icon={link.icon} />
+              </div>
+              <h2 className="mb-3 text-xl font-semibold">
+                {link.name + " "}
+              </h2>
+              <p className="transition-transform group-hover:translate-x-1 motion-reduce:transform-none text-xl">
+                -&gt;
+              </p>
             </div>
-            <h2 className="mb-3 text-xl font-semibold">
-              {link.name + " "}
-            </h2>
-            <p className="transition-transform group-hover:translate-x-1 motion-reduce:transform-none text-xl">
-              -&gt;
+            <p className="m-0 max-w-[30ch] text-sm opacity-50">
+              {link.desc}
             </p>
-          </div>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            {link.desc}
-          </p>
-        </a>
+          </a>
         ))}
-            
+
       </div>
     </main>
   );
