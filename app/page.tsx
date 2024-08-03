@@ -221,7 +221,7 @@ export default function Home() {
 
       <div className="z-10 w-full items-center justify-between font-mono text-sm g:flex lg:flex">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
-          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-4 xl:col-span-4">
+          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-4 xl:col-span-4">
             {topics.map((topic) => (
               <li key={topic.name}>
                 <div
