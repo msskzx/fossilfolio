@@ -7,15 +7,19 @@ import {
   faHackerrank,
   faDocker,
   faPython,
+  faJava,
+  faLinux,
+  faUnity,
 } from '@fortawesome/free-brands-svg-icons'
 import {
+  faC,
   faCode,
 } from '@fortawesome/free-solid-svg-icons';
 
 const meh = {
   name: 'Muhammad Khattab',
   role: 'Software Engineer',
-  intro: 'Since 2014, I have been learning and working on software projects across most of computer science domains and recently I have been passionate about computer vision.',
+  intro: 'Since 2014, I have developing projects across most of computer science domains.',
   years: '10+ Years',
   projects: '50+ Projects',
   problems: '500+ Problems',
@@ -26,24 +30,36 @@ const meh = {
 const topics = [
   {
     name: 'Web Development',
-    role: 'React; TypeScript',
+    tech: 'React; TypeScript',
     icon: faReact,
-    url: '/webdev',
-  }, {
-    name: 'Computer Vision',
-    role: 'Python; C++',
-    icon: faPython,
-    url: '/cv',
   }, {
     name: 'Cloud Technologies',
-    role: 'Docker; Kubernetes',
+    tech: 'Docker; Kubernetes',
     icon: faDocker,
-    url: '/cloud',
+  }, {
+    name: 'Computer Vision',
+    tech: 'Python; C++',
+    icon: faPython,
+  }, {
+    name: 'Augmented Reality',
+    tech: 'C#; Unity',
+    icon: faUnity,
+  }, {
+    name: 'System Design',
+    tech: 'Java',
+    icon: faJava,
   }, {
     name: 'Language Models',
-    role: 'Python',
+    tech: 'Python',
     icon: faPython,
-    url: '/llm',
+  }, {
+    name: 'Security',
+    tech: 'Bash',
+    icon: faLinux,
+  }, {
+    name: 'Operating Systems',
+    tech: 'C; Assembly',
+    icon: faC,
   },
 ]
 
@@ -203,28 +219,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex">
-        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-4 xl:col-span-4">
-          {topics.map((topic) => (
-            <li key={topic.name}>
-              <div
-                className="block h-full w-full group rounded-lg px-5 py-4"
-                rel="noopener noreferrer">
-                <div className="flex items-center gap-x-6">
-                  <div className="relative rounded-full">
-                    <div className="size-12">
-                      <FontAwesomeIcon icon={topic.icon} />
+      <div className="z-10 w-full items-center justify-between font-mono text-sm g:flex lg:flex">
+        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
+          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-4 xl:col-span-4">
+            {topics.map((topic) => (
+              <li key={topic.name}>
+                <div
+                  className="block h-full w-full group rounded-lg px-5 py-4"
+                  rel="noopener noreferrer">
+                  <div className="flex items-center gap-x-6">
+                    <div className="relative rounded-full">
+                      <div className="size-8">
+                        <FontAwesomeIcon icon={topic.icon} />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{topic.name}</h3>
+                      <p className="text-sm font-semibold leading-6 text-indigo-600">{topic.tech}</p>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{topic.name}</h3>
-                    <p className="text-sm font-semibold leading-6 text-indigo-600">{topic.role}</p>
-                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div className="lg:rounded-xl py-24 sm:py-32">
@@ -232,8 +250,8 @@ export default function Home() {
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Recent Projects
             </h2>
-            <p className="mt-6 text-lg leading-8 opacity-70">
-              These are three recent projects other projects are listed in the CV or GitHub.
+            <p className="mt-6 text-lg leading-8 opacity-70 text-justify">
+              These are three recent projects and other projects are listed in the CV or GitHub.
             </p>
 
           </div>
@@ -247,7 +265,7 @@ export default function Home() {
                   <div className="flex flex-col gap-y-4">
                     <div className="flex items-center gap-x-6">
                       <div className="relative rounded-full overflow-hidden">
-                        <div className="size-12">
+                        <div className="size-8">
                           <FontAwesomeIcon icon={project.icon} />
                         </div>
                       </div>
