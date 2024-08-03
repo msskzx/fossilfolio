@@ -28,26 +28,22 @@ const topics = [
     name: 'Web Development',
     role: 'React; TypeScript',
     icon: faReact,
-    url: '/',
-    imageUrl: '/react.png',
+    url: '/webdev',
   }, {
     name: 'Computer Vision',
     role: 'Python; C++',
     icon: faPython,
-    url: '/',
-    imageUrl: '/react.png',
+    url: '/cv',
   }, {
     name: 'Cloud Technologies',
     role: 'Docker; Kubernetes',
     icon: faDocker,
-    url: '/',
-    imageUrl: '/react.png',
+    url: '/cloud',
   }, {
     name: 'Language Models',
     role: 'Python',
     icon: faPython,
-    url: '/',
-    imageUrl: '/react.png',
+    url: '/llm',
   },
 ]
 
@@ -57,19 +53,16 @@ const highlights = [
     desc: 'At AI in Medicine Lab, I devised a three-stage pipeline to for cardiac magnetic resonance image segmentation and evaluated fairness of different models across sex and ethnic groups to mitigate bias. I experimented with a number of approaches like multi-modal and multi-task settings, slice selection, and distribution alignment.',
     url: 'https://github.com/msskzx/unimatch',
     icon: faPython,
-    imageUrl: '/react.png',
   }, {
     name: 'Webex Integration',
     desc: 'At infineon, I implemented a number of microservices and a containerized setup along with the cloud setup no regularly notify 60,000 employees. Furthermore, I implemented an ETL pipeline using Apache Airflow, ensuring efficient batch processing and minimal database queries, and a scalable task queue with robust retry mechanisms.',
-    url: '/',
+    url: 'https://github.com/msskzx',
     icon: faPython,
-    imageUrl: '/react.png',
   }, {
     name: 'Fossilfolio',
     desc: 'At home, I leveraged the science of React, Next.js and TypeScript to build this portfolio, so you can enjoy your eyes. Look at this purple!',
-    url: '/',
+    url: 'https://github.com/msskzx/fossilfolio',
     icon: faReact,
-    imageUrl: '/react.png',
   }
 ]
 
@@ -214,9 +207,8 @@ export default function Home() {
         <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-4 xl:col-span-4">
           {topics.map((topic) => (
             <li key={topic.name}>
-              <a href={topic.url}
-                className="block h-full w-full group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                target="_blank"
+              <div
+                className="block h-full w-full group rounded-lg px-5 py-4"
                 rel="noopener noreferrer">
                 <div className="flex items-center gap-x-6">
                   <div className="relative rounded-full">
@@ -229,7 +221,7 @@ export default function Home() {
                     <p className="text-sm font-semibold leading-6 text-indigo-600">{topic.role}</p>
                   </div>
                 </div>
-              </a>
+              </div>
             </li>
           ))}
         </ul>
