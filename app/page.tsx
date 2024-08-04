@@ -29,13 +29,13 @@ const meh = {
 
 const topics = [
   {
+    name: 'Design Patterns',
+    tech: 'Java; C++',
+    icon: faJava,
+  }, {
     name: 'Web Development',
     tech: 'React; TypeScript',
     icon: faReact,
-  }, {
-    name: 'Cloud Technologies',
-    tech: 'Docker; Kubernetes',
-    icon: faDocker,
   }, {
     name: 'Computer Vision',
     tech: 'Python; C++',
@@ -45,17 +45,17 @@ const topics = [
     tech: 'C#; Unity',
     icon: faUnity,
   }, {
-    name: 'System Design',
-    tech: 'Java',
-    icon: faJava,
-  }, {
     name: 'Language Models',
-    tech: 'Python',
+    tech: 'Python; PyTorch',
     icon: faPython,
   }, {
-    name: 'Security',
-    tech: 'Bash',
+    name: 'System Design',
+    tech: 'SQL; APIs',
     icon: faLinux,
+  }, {
+    name: 'Cloud Technologies',
+    tech: 'Docker; Kubernetes',
+    icon: faDocker,
   }, {
     name: 'Operating Systems',
     tech: 'C; Assembly',
