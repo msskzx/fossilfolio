@@ -19,7 +19,7 @@ import {
 const meh = {
   name: 'Muhammad Khattab',
   role: 'Software Engineer',
-  intro: 'Since 2014, I have developing projects across most of computer science domains.',
+  intro: 'Since 2014, I have been developing projects across most of computer science domains.',
   years: '10+ Years',
   projects: '50+ Projects',
   problems: '500+ Problems',
@@ -29,9 +29,17 @@ const meh = {
 
 const topics = [
   {
+    name: 'System Design',
+    tech: 'Docker; APIs',
+    icon: faLinux,
+  }, {
     name: 'Design Patterns',
-    tech: 'Java; C++',
+    tech: 'Java; Python',
     icon: faJava,
+  }, {
+    name: 'Cloud Technologies',
+    tech: 'Docker; Kubernetes',
+    icon: faDocker,
   }, {
     name: 'Web Development',
     tech: 'React; TypeScript',
@@ -49,30 +57,22 @@ const topics = [
     tech: 'Python; PyTorch',
     icon: faPython,
   }, {
-    name: 'System Design',
-    tech: 'SQL; APIs',
-    icon: faLinux,
-  }, {
-    name: 'Cloud Technologies',
-    tech: 'Docker; Kubernetes',
-    icon: faDocker,
-  }, {
-    name: 'Operating Systems',
-    tech: 'C; Assembly',
+    name: 'Parallel Computing',
+    tech: 'CUDA; C',
     icon: faC,
   },
 ]
 
 const highlights = [
   {
-    name: 'Image Segmentation',
-    desc: 'At AI in Medicine Lab, I devised a three-stage pipeline to for cardiac magnetic resonance image segmentation and evaluated fairness of different models across sex and ethnic groups to mitigate bias. I experimented with a number of approaches like multi-modal and multi-task settings, slice selection, and distribution alignment.',
-    url: 'https://github.com/msskzx/unimatch',
-    icon: faPython,
-  }, {
     name: 'Webex Integration',
     desc: 'At infineon, I implemented a number of microservices and a containerized setup along with the cloud setup no regularly notify 60,000 employees. Furthermore, I implemented an ETL pipeline using Apache Airflow, ensuring efficient batch processing and minimal database queries, and a scalable task queue with robust retry mechanisms.',
     url: 'https://github.com/msskzx',
+    icon: faPython,
+  }, {
+    name: 'Image Segmentation',
+    desc: 'At AI in Medicine Lab, I devised a three-stage pipeline to for cardiac magnetic resonance image segmentation and evaluated fairness of different models across sex and ethnic groups to mitigate bias. I experimented with a number of approaches like multi-modal and multi-task settings, slice selection, and distribution alignment.',
+    url: 'https://github.com/msskzx/unimatch',
     icon: faPython,
   }, {
     name: 'Fossilfolio',
