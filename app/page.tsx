@@ -66,7 +66,7 @@ const topics = [
 const highlights = [
   {
     name: 'Webex Integration',
-    desc: 'At infineon, I implemented a number of microservices and a containerized setup along with the cloud setup no regularly notify 60,000 employees. Furthermore, I implemented an ETL pipeline using Apache Airflow, ensuring efficient batch processing and minimal database queries, and a scalable task queue with robust retry mechanisms.',
+    desc: 'At infineon, I implemented a number of microservices and a containerized setup along with the cloud setup to regularly notify 60,000 employees. Furthermore, I implemented an ETL pipeline using Apache Airflow, ensuring efficient batch processing and minimal database queries, and a scalable task queue with robust retry mechanisms.',
     url: 'https://github.com/msskzx',
     icon: faPython,
   }, {
