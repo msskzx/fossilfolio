@@ -2,18 +2,12 @@ import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faReact,
-  faDocker,
   faPython,
-  faJava,
-  faLinux,
-  faUnity,
 } from '@fortawesome/free-brands-svg-icons'
-import {
-  faC,
-} from '@fortawesome/free-solid-svg-icons';
 
 import AnimatedCard from './animatedCard';
 import { links } from './links'
+import { topics } from './topics'
 
 const meh = {
   name: 'Muhammad Khattab',
@@ -25,42 +19,6 @@ const meh = {
   url: '/',
   imageUrl: '/meh.jpg',
 }
-
-const topics = [
-  {
-    name: 'System Design',
-    tech: 'Docker; APIs',
-    icon: faLinux,
-  }, {
-    name: 'Design Patterns',
-    tech: 'Java; Python',
-    icon: faJava,
-  }, {
-    name: 'Cloud Technologies',
-    tech: 'Docker; Kubernetes',
-    icon: faDocker,
-  }, {
-    name: 'Web Development',
-    tech: 'React; TypeScript',
-    icon: faReact,
-  }, {
-    name: 'Computer Vision',
-    tech: 'Python; C++',
-    icon: faPython,
-  }, {
-    name: 'Augmented Reality',
-    tech: 'C#; Unity',
-    icon: faUnity,
-  }, {
-    name: 'Language Models',
-    tech: 'Python; PyTorch',
-    icon: faPython,
-  }, {
-    name: 'Parallel Computing',
-    tech: 'CUDA; C',
-    icon: faC,
-  },
-]
 
 const highlights = [
   {
