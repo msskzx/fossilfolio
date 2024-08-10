@@ -1,10 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faGithub,
-  faLinkedin,
   faReact,
-  faHackerrank,
   faDocker,
   faPython,
   faJava,
@@ -13,16 +10,18 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faC,
-  faCode,
 } from '@fortawesome/free-solid-svg-icons';
+
+import AnimatedCard from './animatedCard';
+import { links } from './links'
 
 const meh = {
   name: 'Muhammad Khattab',
   role: 'Software Engineer',
   intro: 'Since 2014, I have been developing projects across most of computer science domains.',
-  years: '10+ Years',
-  projects: '50+ Projects',
-  problems: '500+ Problems',
+  years: { val: 10, title: '+ Years', desc: 'of Software Development' },
+  projects: { val: 50, title: '+ Projects', desc: 'in Diverse Teams' },
+  problems: { val: 500, title: '+ Problems', desc: 'on Coding Platforms' },
   url: '/',
   imageUrl: '/meh.jpg',
 }
@@ -82,39 +81,6 @@ const highlights = [
   }
 ]
 
-const myLinks = {
-  github: 'https://github.com/msskzx',
-  linkedin: 'https://linkedin.com/in/msskzx/',
-  leetcode: 'https://leetcode.com/msskzx/',
-  hackerrank: 'https://hackerrank.com/profile/msskzx',
-  codeforces: 'https://codeforces.com/profile/mssk',
-  problems: 'https://github.com/msskzx/problem-solvn',
-}
-
-const links = [
-  {
-    name: 'Linkedin',
-    url: 'https://linkedin.com/in/msskzx',
-    icon: faLinkedin,
-    desc: 'Same things i said here but more blue.',
-  }, {
-    name: 'GitHub',
-    url: 'https://github.com/msskzx',
-    icon: faGithub,
-    desc: 'Explore through all my public projects.',
-  }, {
-    name: 'HackerRank',
-    url: 'https://hackerrank.com/profile/msskzx',
-    icon: faHackerrank,
-    desc: 'Enjoy the sight of ordinary certificates.',
-  }, {
-    name: 'LeetCode',
-    url: 'https://leetcode.com/msskzx',
-    icon: faCode,
-    desc: 'Nothing to see here but in O(1).',
-  },
-]
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -145,76 +111,13 @@ export default function Home() {
             </p>
           </div>
           <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 sm:gap-y-16 xl:col-span-3">
-            <div className="shadow-lg rounded-lg full-rounded overflow-hidden">
-              <div className="p-6">
-                <h2 className="text-xl font-semibold mb-2 tracking-tight opacity-70">{meh.years}</h2>
-                <p className="tracking-tight opacity-50 mb-3">of Software Development</p>
-                <div className="size-7">
-                  <a
-                    href={myLinks.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80 transition-colors"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="shadow-lg rounded-lg overflow-hidden">
-              <div className="p-6">
-                <h2 className="text-xl tracking-tight font-semibold mb-2 opacity-70">{meh.projects}</h2>
-                <p className="tracking-tight opacity-50 mb-3">in Diverse Teams</p>
-                <div className="size-7">
-                  <a
-                    href={myLinks.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80 transition-colors"
-                  >
-                    <FontAwesomeIcon icon={faGithub} />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="shadow-lg rounded-lg overflow-hidden">
-              <div className="p-6">
-                <h2 className="text-xl tracking-tight font-semibold mb-2 opacity-70">500+ Problems</h2>
-                <p className=" tracking-tight opacity-50 mb-3">on Coding Platforms</p>
-                <div className="grid sm:grid-cols-5 lg:col-span-3">
-                  <div className="size-7">
-                    <a
-                      href={myLinks.problems}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:opacity-80 transition-colors"
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  </div>
-                  <div className="size-7">
-                    <a
-                      href={myLinks.hackerrank}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:opacity-80 transition-colors"
-                    >
-                      <FontAwesomeIcon icon={faHackerrank} />
-                    </a>
-                  </div>
-                  <div className="size-7">
-                    <a
-                      href={myLinks.leetcode}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:opacity-80 transition-colors"
-                    >
-                      <FontAwesomeIcon icon={faCode} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <AnimatedCard targetNumber={meh.years.val} title={meh.years.title} desc={meh.years.desc} link={links.linkedin.url} icon={links.linkedin.icon} />
+
+            <AnimatedCard targetNumber={meh.projects.val} title={meh.projects.title} desc={meh.projects.desc} link={links.github.url} icon={links.github.icon} />
+
+            <AnimatedCard targetNumber={meh.problems.val} title={meh.problems.title} desc={meh.problems.desc} link={links.leetcode.url} icon={links.leetcode.icon} />
+            
           </div>
         </div>
       </div>
@@ -286,7 +189,7 @@ export default function Home() {
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl sm:grid-cols-2 lg:grid-cols-4 lg:text-left">
 
-        {links.map((link) => (
+        {Object.values(links).map((link) => (
           <a
             key={link.name}
             href={link.url}
