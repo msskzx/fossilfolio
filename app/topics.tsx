@@ -20,16 +20,16 @@ interface Topic {
 
 export const topics: Topic[] = [
     {
-        name: 'System Design',
-        tech: 'Docker; APIs',
-        icon: faLinux,
-    }, {
         name: 'Design Patterns',
         tech: 'Java; Python',
         icon: faJava,
     }, {
+        name: 'System Design',
+        tech: 'Docker; APIs',
+        icon: faLinux,
+    }, {
         name: 'Cloud Technologies',
-        tech: 'Docker; Kubernetes',
+        tech: 'Kubernetes; AWS',
         icon: faDocker,
     }, {
         name: 'Web Development',

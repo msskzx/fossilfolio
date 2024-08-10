@@ -57,7 +57,7 @@ export default function Home() {
                   rel="noopener noreferrer">
                   <div className="flex items-center gap-x-6">
                     <div className="relative rounded-full">
-                      <div className="size-8">
+                      <div className="text-4xl">
                         <FontAwesomeIcon icon={topic.icon} />
                       </div>
                     </div>
@@ -79,7 +79,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Recent Projects
             </h2>
             <p className="mt-6 text-lg leading-8 opacity-70 text-justify">
-              These are three recent projects and other projects are listed in the CV or GitHub.
+              These are some recent projects and other projects are listed on GitHub and the CV.
             </p>
 
           </div>
@@ -93,7 +93,7 @@ export default function Home() {
                   <div className="flex flex-col gap-y-4">
                     <div className="flex items-center gap-x-6">
                       <div className="relative rounded-full overflow-hidden">
-                        <div className="size-8">
+                        <div className="text-4xl">
                           <FontAwesomeIcon icon={project.icon} />
                         </div>
                       </div>
@@ -123,7 +123,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <div className="flex gap-x-4">
-              <div className="size-5">
+              <div className="text-2xl">
                 <FontAwesomeIcon icon={link.icon} />
               </div>
               <h2 className="mb-3 text-xl font-semibold">

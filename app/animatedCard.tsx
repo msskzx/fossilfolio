@@ -41,7 +41,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ targetNumber, title, desc, 
                     {links.map((link) => (
                         <div
                             key={link.name}
-                            className="size-7">
+                            className="text-2xl">
                             <a
                                 href={link.url}
                                 target="_blank"
