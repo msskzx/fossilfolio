@@ -2,18 +2,17 @@
 "use client"; // Ensure this line is at the top
 
 import React, { useEffect, useState } from 'react';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import MiLink from './links';
 
 interface AnimatedCardProps {
     targetNumber: number;
     title: string;
     desc: string;
-    link: string;
-    icon: IconDefinition;
+    links: MiLink[];
 }
 
-const AnimatedCard: React.FC<AnimatedCardProps> = ({ targetNumber, title, desc, link, icon }) => {
+const AnimatedCard: React.FC<AnimatedCardProps> = ({ targetNumber, title, desc, links }) => {
     const [currentNumber, setCurrentNumber] = useState(0);
 
     useEffect(() => {
@@ -38,15 +37,21 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ targetNumber, title, desc, 
                     {currentNumber + title}
                 </h2>
                 <p className="tracking-tight opacity-50 mb-3">{desc}</p>
-                <div className="size-7">
-                    <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:opacity-80 transition-colors"
-                    >
-                        <FontAwesomeIcon icon={icon} />
-                    </a>
+                <div className="flex gap-4">
+                    {links.map((link) => (
+                        <div
+                            key={link.name}
+                            className="size-7">
+                            <a
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:opacity-80 transition-colors"
+                            >
+                                <FontAwesomeIcon icon={link.icon} />
+                            </a>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

@@ -9,14 +9,14 @@ import {
     faCode,
 } from '@fortawesome/free-solid-svg-icons';
 
-interface Link {
+export default interface MiLink {
     name: string;
     url: string;
     icon: IconDefinition;
     desc: string;
 }
 
-export const links: { [key: string]: Link } = {
+export const links: { [key: string]: MiLink } = {
     linkedin:
     {
         name: 'Linkedin',

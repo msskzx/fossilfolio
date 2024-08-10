@@ -37,11 +37,11 @@ export default function Home() {
           </div>
           <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 sm:gap-y-16 xl:col-span-3">
 
-            <AnimatedCard targetNumber={meh.years.val} title={meh.years.title} desc={meh.years.desc} link={links.linkedin.url} icon={links.linkedin.icon} />
+            <AnimatedCard targetNumber={meh.years.val} title={meh.years.title} desc={meh.years.desc} links={[links.linkedin]} />
 
-            <AnimatedCard targetNumber={meh.projects.val} title={meh.projects.title} desc={meh.projects.desc} link={links.github.url} icon={links.github.icon} />
+            <AnimatedCard targetNumber={meh.projects.val} title={meh.projects.title} desc={meh.projects.desc} links={[links.github]} />
 
-            <AnimatedCard targetNumber={meh.problems.val} title={meh.problems.title} desc={meh.problems.desc} link={links.leetcode.url} icon={links.leetcode.icon} />
+            <AnimatedCard targetNumber={meh.problems.val} title={meh.problems.title} desc={meh.problems.desc} links={[links.leetcode, links.hackerrank]} />
             
           </div>
         </div>
