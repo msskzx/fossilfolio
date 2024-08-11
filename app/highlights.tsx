@@ -20,12 +20,12 @@ export const highlights: Highlight[] = [
       icon: faPython,
     }, {
       title: 'The Porsche Circle - Metzler Vater GmbH',
-      desc: 'I managed the data migration from DynamoDB to RDS, significantly reduced setup overhead. I also introduced a code registration module and admin panel functionalities to enhance content management. Additionally, I oversaw project maintenance and release management.',
+      desc: 'For the Porsche Circle project, I led the migration from DynamoDB to RDS, reducing setup overhead and simplifying onboarding for new team members. I introduced a code registration module to streamline the user invitation process and added admin panel functionalities to improve content management. Additionally, I managed project maintenance and release management.',
       url: 'https://www.theporschecircle.com/',
       icon: faPhp,
     }, {
       title: 'Alldevice - Birkle IT AG',
-      desc: 'I introduced features like a calendar module for task management with varying granularity levels, ensuring modularity and scalability. This streamlined integration, improved maintainability, and enhanced flexibility for future updates. I also optimized existing code to reduce response time, managed requirements engineering directly with the client, and maintained the project, ensuring continuous feature integration.',
+      desc: 'For Alldevice project, I introduced a calendar module for task management with varying granularity, enabling users to make better maintenance plans. I also optimized existing code to reduce response time, managed requirements engineering directly with the client, and oversaw project maintenance to ensure continuous feature integration.',
       url: 'https://www.alldevicesoft.com/',
       icon: faPhp,
     }, {
@@ -37,10 +37,10 @@ export const highlights: Highlight[] = [
       title: 'Novel View Synthesis',
       desc: 'Neural Radiance Fields (NeRF) offer high-quality novel view synthesis but are too computationally intensive for real-time use. KiloNeRF speeds up processing by dividing the scene into a voxel grid with a tiny MLP per voxel, but still requires time-consuming NeRF model training and isn\'t fast enough for real-time execution. This project seeks to enhance KiloNeRF by accelerating both inference and training, and incorporating semantic class as an additional output.',
       url: 'https://github.com/msskzx/kilonerf',
-      icon: faReact,
+      icon: faPython,
     }, {
       title: 'Fossilfolio',
-      desc: 'At home, I leveraged the science of React, Next.js and TypeScript to build this portfolio, so you can enjoy your eyes. Look at this purple!',
+      desc: 'At home, I leveraged the art of React, Next.js and TypeScript to build this portfolio, so you can enjoy your eyes. Look at this purple! Anyway, the project leverages states, effects, and functional components to enhance code reuse and maintainability. It also features an automatic dark/light mode switch based on device settings, for which I exclusively used SVGs to ensure a smooth theme transition. Finally, I deployed the app on Vercel.',
       url: 'https://github.com/msskzx/fossilfolio',
       icon: faReact,
     }
