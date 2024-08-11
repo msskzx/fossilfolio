@@ -44,7 +44,7 @@ export const topics: Topic[] = [
     desc: 'PyTorch; NumPy; NLTK',
     icon: faPython,
   }, {
-    title: 'Augmented Reality',
+    title: 'Mixed Reality',
     desc: 'C#; Unity',
     icon: faUnity,
   }, {
