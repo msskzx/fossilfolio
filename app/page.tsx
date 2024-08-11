@@ -1,12 +1,12 @@
 import Image from "next/image";
-import AnimatedCard from './animatedCard';
-import { links, otherLinks } from './links'
-import { topics } from './topics'
-import { highlights } from './highlights'
-import { meh } from './meh'
-import TopicCard from "./topicCard";
-import ProjectCard from "./projectCard";
-import LinkCard from "./linkCard";
+import AnimatedCard from './components/animatedCard';
+import { links, otherLinks } from './data/links'
+import { topics } from './data/topics'
+import { highlights } from './data/highlights'
+import { meh } from './data/meh'
+import TopicCard from "./components/topicCard";
+import ProjectCard from "./components/projectCard";
+import LinkCard from "./components/linkCard";
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="lg:rounded-xl py-24 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 sm:grid-cols-1 xl:grid-cols-4">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl opacity-90">
               Portfolio
             </h2>
             <p className="mt-6 text-lg leading-8 opacity-70">
@@ -64,8 +64,8 @@ export default function Home() {
       <div className="lg:rounded-xl py-24 sm:py-32">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 sm:grid-cols-1 xl:grid-cols-4 mb-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Recent Projects
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl opacity-90">
+              Projects
             </h2>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function Home() {
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl sm:grid-cols-2 lg:grid-cols-4 lg:text-left">
         {Object.values(links).map((item) => (
-          <LinkCard title={item.title} desc={item.desc} icon={item.icon} url={item.url} />
+          <LinkCard key={item.title} title={item.title} desc={item.desc} icon={item.icon} url={item.url} />
         ))}
       </div>
     </main>

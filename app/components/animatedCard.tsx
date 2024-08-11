@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import MiLink from './links';
+import MiLink from '../data/links';
 
 interface AnimatedCardProps {
   targetNumber: number;
