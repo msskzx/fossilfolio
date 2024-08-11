@@ -10,6 +10,7 @@ import {
 
 import {
   faC,
+  faDatabase,
 } from '@fortawesome/free-solid-svg-icons';
 
 interface Topic {
@@ -21,19 +22,23 @@ interface Topic {
 export const topics: Topic[] = [
   {
     title: 'Design Patterns',
-    desc: 'Java; Python; PHP; C++; Kotlin',
+    desc: 'Java; Python; PHP',
     icon: faJava,
   }, {
     title: 'System Design',
-    desc: 'Docker; SQL; Kubernetes; NoSQL',
+    desc: 'Docker; Kubernetes; SQL',
     icon: faDocker,
   }, {
     title: 'Cloud Computing',
-    desc: 'AWS; GitOps; Kafka; Airflow',
+    desc: 'AWS; GitOps; ArgoCD',
     icon: faAws,
   }, {
+    title: 'Data Engineering',
+    desc: 'Spark; Airflow; Pandas',
+    icon: faDatabase,
+  }, {
     title: 'Web Development',
-    desc: 'Spring; Laravel; React; TypeScript',
+    desc: 'Spring; Laravel; React',
     icon: faLaravel,
   }, {
     title: 'Computer Vision',
@@ -41,7 +46,7 @@ export const topics: Topic[] = [
     icon: faPython,
   }, {
     title: 'Language Models',
-    desc: 'PyTorch; NumPy; NLTK',
+    desc: 'PyTorch; NumPy',
     icon: faPython,
   }, {
     title: 'Mixed Reality',
@@ -49,7 +54,7 @@ export const topics: Topic[] = [
     icon: faUnity,
   }, {
     title: 'Parallel Computing',
-    desc: 'CUDA; C; OpenMP',
+    desc: 'CUDA; C',
     icon: faC,
   },
 ]

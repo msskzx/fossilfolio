@@ -58,7 +58,7 @@ export default function Home() {
       {/* Topics */}
       <div className="z-10 w-full items-center justify-between font-mono text-sm g:flex lg:flex">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-12 px-6 lg:px-8">
-          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-4 xl:col-span-4">
+          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:col-span-3">
             {topics.map((item) => (
               <li key={item.title}>
                 <TopicCard title={item.title} desc={item.desc} icon={item.icon} />
