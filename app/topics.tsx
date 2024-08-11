@@ -13,43 +13,43 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 interface Topic {
-    name: string;
-    tech: string;
+    title: string;
+    desc: string;
     icon: IconDefinition;
 }
 
 export const topics: Topic[] = [
     {
-        name: 'Design Patterns',
-        tech: 'Java; Python',
+        title: 'Design Patterns',
+        desc: 'Java; Python',
         icon: faJava,
     }, {
-        name: 'System Design',
-        tech: 'Docker; APIs',
+        title: 'System Design',
+        desc: 'Docker; APIs',
         icon: faLinux,
     }, {
-        name: 'Cloud Technologies',
-        tech: 'Kubernetes; AWS',
+        title: 'Cloud Technologies',
+        desc: 'Kubernetes; AWS',
         icon: faDocker,
     }, {
-        name: 'Web Development',
-        tech: 'React; TypeScript',
+        title: 'Web Development',
+        desc: 'React; TypeScript',
         icon: faReact,
     }, {
-        name: 'Computer Vision',
-        tech: 'Python; C++',
+        title: 'Computer Vision',
+        desc: 'Python; C++',
         icon: faPython,
     }, {
-        name: 'Augmented Reality',
-        tech: 'C#; Unity',
+        title: 'Augmented Reality',
+        desc: 'C#; Unity',
         icon: faUnity,
     }, {
-        name: 'Language Models',
-        tech: 'Python; PyTorch',
+        title: 'Language Models',
+        desc: 'Python; PyTorch',
         icon: faPython,
     }, {
-        name: 'Parallel Computing',
-        tech: 'CUDA; C',
+        title: 'Parallel Computing',
+        desc: 'CUDA; C',
         icon: faC,
     },
 ]

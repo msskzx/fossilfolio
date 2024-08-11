@@ -1,5 +1,4 @@
-// components/AnimatedCard.tsx
-"use client"; // Ensure this line is at the top
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -5,6 +5,7 @@ import { links, otherLinks } from './links'
 import { topics } from './topics'
 import { highlights } from './highlights'
 import { meh } from './meh'
+import TopicCard from "./topicCard";
 
 export default function Home() {
   return (
@@ -51,22 +52,8 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8">
           <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-4 xl:col-span-4">
             {topics.map((topic) => (
-              <li key={topic.name}>
-                <div
-                  className="block h-full w-full group rounded-lg px-5 py-4"
-                  rel="noopener noreferrer">
-                  <div className="flex items-center gap-x-6">
-                    <div className="relative rounded-full">
-                      <div className="text-4xl">
-                        <FontAwesomeIcon icon={topic.icon} />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{topic.name}</h3>
-                      <p className="text-sm font-semibold leading-6 text-indigo-600">{topic.tech}</p>
-                    </div>
-                  </div>
-                </div>
+              <li key={topic.title}>
+                <TopicCard title={topic.title} desc={topic.desc} icon={topic.icon} />
               </li>
             ))}
           </ul>
