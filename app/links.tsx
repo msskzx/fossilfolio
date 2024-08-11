@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 import {
+    faChartSimple,
     faCode,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -41,5 +42,22 @@ export const links: { [key: string]: MiLink } = {
         url: 'https://leetcode.com/msskzx',
         icon: faCode,
         desc: 'Nothing to see here but in O(1).',
+    }
+};
+
+
+export const otherLinks: { [key: string]: MiLink } = {
+    codeforces:
+    {
+        name: 'Codeforces',
+        url: 'https://codeforces.com/profile/mssk',
+        icon: faChartSimple,
+        desc: 'Same things i said here but more blue.',
+    },
+    problemSolvn: {
+        name: 'GitHub',
+        url: 'https://github.com/msskzx/problem-solvn',
+        icon: faGithub,
+        desc: 'Solved coding problems on various coding platforms.',
     }
 };

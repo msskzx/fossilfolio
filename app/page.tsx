@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AnimatedCard from './animatedCard';
-import { links } from './links'
+import { links, otherLinks } from './links'
 import { topics } from './topics'
 import { highlights } from './highlights'
 import { meh } from './meh'
@@ -41,7 +41,7 @@ export default function Home() {
 
             <AnimatedCard targetNumber={meh.projects.val} title={meh.projects.title} desc={meh.projects.desc} links={[links.github]} />
 
-            <AnimatedCard targetNumber={meh.problems.val} title={meh.problems.title} desc={meh.problems.desc} links={[links.leetcode, links.hackerrank]} />
+            <AnimatedCard targetNumber={meh.problems.val} title={meh.problems.title} desc={meh.problems.desc} links={[links.leetcode, otherLinks.codeforces, links.hackerrank]} />
             
           </div>
         </div>
