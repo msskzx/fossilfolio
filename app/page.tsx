@@ -6,6 +6,7 @@ import { topics } from './topics'
 import { highlights } from './highlights'
 import { meh } from './meh'
 import TopicCard from "./topicCard";
+import ProjectCard from "./projectCard";
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
             <AnimatedCard targetNumber={meh.projects.val} title={meh.projects.title} desc={meh.projects.desc} links={[links.github]} />
 
             <AnimatedCard targetNumber={meh.problems.val} title={meh.problems.title} desc={meh.problems.desc} links={[links.leetcode, otherLinks.codeforces, links.hackerrank]} />
-            
+
           </div>
         </div>
       </div>
@@ -61,42 +62,21 @@ export default function Home() {
       </div>
 
       <div className="lg:rounded-xl py-24 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 sm:grid-cols-1 xl:grid-cols-4 mb-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Recent Projects
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Recent Projects
             </h2>
-            <p className="mt-6 text-lg leading-8 opacity-70 text-justify">
-              These are some recent projects and other projects are listed on GitHub and the CV.
-            </p>
-
           </div>
-          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 sm:gap-y-16 xl:col-span-2">
-            {highlights.map((project) => (
-              <li key={project.name}>
-                <a href={project.url}
-                  className="block h-full w-full group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <div className="flex flex-col gap-y-4">
-                    <div className="flex items-center gap-x-6">
-                      <div className="relative rounded-full overflow-hidden">
-                        <div className="text-4xl">
-                          <FontAwesomeIcon icon={project.icon} />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-base font-semibold leading-7 tracking-tight opacity-70">{project.name}</h3>
-                      </div>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold leading-6 text-indigo-600">{project.desc}</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
+
+        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 md:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+          {highlights.map((highlight) => (
+            <li key={highlight.title}>
+              <ProjectCard title={highlight.title} desc={highlight.desc} icon={highlight.icon} url={highlight.url} />
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl sm:grid-cols-2 lg:grid-cols-4 lg:text-left">
