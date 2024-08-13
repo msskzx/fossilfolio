@@ -7,10 +7,13 @@ import { meh } from './data/meh'
 import TopicCard from "./components/topicCard";
 import ProjectCard from "./components/projectCard";
 import LinkCard from "./components/linkCard";
+import ChatBox from "./components/chatBox";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+
+      {/* <ChatBox title="Zlightosaur"/> */}
 
       <div className="lg:rounded-xl">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 mb-6">
@@ -58,7 +61,7 @@ export default function Home() {
       {/* Topics */}
       <div className="z-10 w-full items-center justify-between font-mono text-sm g:flex lg:flex">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-12 px-6 lg:px-8">
-          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xl:col-span-3">
+          <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-1 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
             {topics.map((item) => (
               <li key={item.title}>
                 <TopicCard title={item.title} desc={item.desc} icon={item.icon} />
