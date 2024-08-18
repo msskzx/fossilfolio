@@ -3,14 +3,14 @@ import {
   faJava,
   faDocker,
   faPython,
-  faUnity,
   faAws,
-  faLaravel,
+  faReact,
 } from '@fortawesome/free-brands-svg-icons'
 
 import {
-  faC,
+  faCircleNodes,
   faDatabase,
+  faServer,
 } from '@fortawesome/free-solid-svg-icons';
 
 interface Topic {
@@ -21,40 +21,40 @@ interface Topic {
 
 export const topics: Topic[] = [
   {
-    title: 'Design Patterns',
-    desc: 'Java; Python; PHP',
+    title: 'Main Languages',
+    desc: 'Java; Python; C++',
     icon: faJava,
   }, {
     title: 'System Design',
-    desc: 'Docker; Kubernetes; SQL',
+    desc: 'Docker; Kubernetes; Kafka',
     icon: faDocker,
   }, {
     title: 'Cloud Computing',
-    desc: 'AWS; GitOps; ArgoCD',
+    desc: 'AWS; ArgoCD; CI/CD',
     icon: faAws,
   }, {
-    title: 'Data Engineering',
-    desc: 'Spark; Airflow; Pandas',
+    title: 'Databases',
+    desc: 'SQL; NoSQL; Neo4j',
     icon: faDatabase,
   }, {
     title: 'Web Development',
-    desc: 'Spring; Laravel; React',
-    icon: faLaravel,
+    desc: 'Spring; Djagno; React.js',
+    icon: faReact,
+  }, {
+    title: 'Network Monitoring',
+    desc: 'Elasticsearch; Logstash; Kibana',
+    icon: faServer,
+  }, {
+    title: 'Data Engineering',
+    desc: 'Airflow; Spark; Flink',
+    icon: faCircleNodes,
   }, {
     title: 'Computer Vision',
-    desc: 'Python; C++; OpenCV;',
+    desc: 'Python; C++; OpenCV',
     icon: faPython,
   }, {
     title: 'Language Models',
-    desc: 'PyTorch; NumPy',
+    desc: 'PyTorch; NumPy; Pandas',
     icon: faPython,
-  }, {
-    title: 'Mixed Reality',
-    desc: 'C#; Unity',
-    icon: faUnity,
-  }, {
-    title: 'Parallel Computing',
-    desc: 'CUDA; C',
-    icon: faC,
   },
 ]
