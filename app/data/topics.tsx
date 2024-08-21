@@ -34,7 +34,7 @@ export const topics: Topic[] = [
     icon: faAws,
   }, {
     title: 'Databases',
-    desc: 'SQL; NoSQL; Neo4j',
+    desc: 'SQL; NoSQL; Graphs',
     icon: faDatabase,
   }, {
     title: 'Web Development',
